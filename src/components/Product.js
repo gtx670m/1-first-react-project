@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 
 class Product extends Component {
     render() {
+        const {product, children} = this.props;
         return (
             <div className="col-sm-6">
                 <div className="card" style={{ width: 400 }}>
                     <img 
                         className="card-img-top" 
-                        src="http://www.independentmediators.co.uk/wp-content/uploads/2016/02/placeholder-image.jpg" 
-                        alt="Card image" 
+                        src={product.image} 
+                        alt="Card"
                     />
                     <div className="card-body">
-                        <h4 className="card-title">John Doe</h4>
-                        <p className="card-text">Some example text.</p>
+                        <h4 className="card-title">{product.name}</h4>
+                        <p className="card-text">{product.price} VND</p>
+                        <p className="card-text">{children}</p>
                         <a href="/" className="btn btn-primary">See Profile</a>
                     </div>
                 </div>

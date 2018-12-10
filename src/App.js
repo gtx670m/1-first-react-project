@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from '../src/components/Header'
 import Product from './components/Product';
@@ -29,11 +28,13 @@ class App extends Component {
           {
               name: 'iPhone 7 Plus',
               price: '10500000',
-              status: undefined
+              status: undefined,
+              image: 'https://cdn.tgdd.vn/Products/Images/42/78124/apple-iphone-7-plus-1-400x460-400x460.png'
           }, {
               name: 'iPhone 8 Plus',
               price: '12800000',
-              status: null
+              status: null,
+              image: 'https://cdn.tgdd.vn/Products/Images/42/114110/iphone-8-plus-64gb-h1-400x460.png'
           },
       ];
       const [
@@ -59,12 +60,8 @@ class App extends Component {
       <div className="App">
         <Header/>
         <div className="row">
-            <Product />
-            <Product />
-            
-        </div>
-        <div className="row">
-            <Product />
+            <Product product={product[0]}>this is children</Product>
+            <Product product={product[1]}>another children</Product>
         </div>
         <br/>
         <br/>
