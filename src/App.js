@@ -18,6 +18,9 @@ class App extends Component {
         ) : ''
     )  
   }
+  onClick() {
+      alert('Ok!');
+  }
   render() {
       const display = true;
       const a = 'Quang';
@@ -64,6 +67,9 @@ class App extends Component {
             <Product product={product[1]}>another children</Product>
         </div>
         <br/>
+        <button type="button" className="btn btn-warning" onClick={this.onClick}>
+            Click me!
+        </button>
         <br/>
         <h1>
             Hello! {str}
