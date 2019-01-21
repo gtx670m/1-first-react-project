@@ -43,11 +43,11 @@ class Product extends Component {
                         <p className="card-text">{children}</p>
                         {/* Không truyền tham số */}
                         {/* Không cần quan tâm 3 cách ở trên */}
-                        <a className="btn btn-primary" onClick={this.onClick2}>Buy2</a>
+                        <button className="btn btn-primary" onClick={this.onClick2}>Buy2</button>
                         {/* Có truyền tham số */}
                         {/* Phải dùng 1 trong 3 cách ở trên */}
-                        <a className="btn btn-primary" onClick={() => this.onClick()}>Buy</a>
-                        <a className="btn btn-primary" onClick={() => this.onClick3("alo")}>Buy3</a>
+                        <button className="btn btn-primary" onClick={() => this.onClick()}>Buy</button>
+                        <button className="btn btn-primary" onClick={() => this.onClick3("alo")}>Buy3</button>
                     </div>
                 </div>
             </div>

@@ -40,4 +40,15 @@ const onClick = () => {
     alert('Ok!');
 }
 
-export { product, Person, checkAge, showPerson, onClick };
+const display = true;
+const a = 'Quang';
+const c = 1;
+const d = 2;
+const str = `I'm ${a}`;
+
+const Teo = new Person('Teo', 25);
+const Ti = new Person('Ti', 20);
+const Tun = new Person('Tun', 17);
+const users = [Teo, Ti, Tun];
+
+export { product, showPerson, onClick, display, c, d, str, users };

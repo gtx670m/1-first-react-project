@@ -2,16 +2,22 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from '../src/components/Header'
 import Product from './components/Product';
-import { product, Person, checkAge, showPerson, onClick } from './data';
 import Form from './components/Form';
+import Table from './components/Table';
+import {
+    product,
+    showPerson,
+    onClick,
+    display,
+    c,
+    d,
+    str,
+    users
+} from './data';
+
 
 class App extends Component {
     render() {
-        const display = true;
-        const a = 'Quang';
-        const c = 1;
-        const d = 2;
-        const str = `I'm ${a}`;
         const [
             { name: productName1 = '',
                 price: productPrice1 = 0,
@@ -20,14 +26,11 @@ class App extends Component {
                 price: productPrice2 = 0,
                 status: productStatus2 = 'out of stock' },
         ] = product;
-        const Teo = new Person('Teo', 25);
-        const Ti = new Person('Ti', 20);
-        const Tun = new Person('Tun', 17);
-        const users = [Teo, Ti, Tun];
 
         return (
             <div className="App">
                 <Header/>
+                <Table/>
                 <Form />
                 <div className="row">
                     <Product product={product[0]}>this is children</Product>
