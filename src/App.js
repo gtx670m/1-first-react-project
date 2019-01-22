@@ -4,6 +4,8 @@ import Header from '../src/components/Header'
 import Product from './components/Product';
 import Form from './components/Form';
 import Table from './components/Table';
+import Clock from './components/Clock';
+
 import {
     product,
     showPerson,
@@ -29,36 +31,37 @@ class App extends Component {
 
         return (
             <div className="App">
-                <Header/>
-                <Table/>
+                <Header />
+                <Table />
                 <Form />
+                <Clock />
                 <div className="row">
                     <Product product={product[0]}>this is children</Product>
                     <Product product={product[1]}>another children</Product>
                 </div>
-                <br/>
+                <br />
                 <button type="button" className="btn btn-warning" onClick={onClick}>
                     Click me!
                 </button>
-                <br/>
+                <br />
                 <h1>
                     Hello! {str}
                 </h1>
                 <div>
-                    c = {c} <br/>
-                    d = {d} <br/>
+                    c = {c} <br />
+                    d = {d} <br />
                     c + d = {c + d}
                 </div>
                 <h2>
-                    name: {productName1} <br/>
-                    price: {productPrice1} <br/>
+                    name: {productName1} <br />
+                    price: {productPrice1} <br />
                     status: {productStatus1}
-                    <br/><br/>
-                    name: {productName2} <br/>
-                    price: {productPrice2} <br/>
+                    <br /><br />
+                    name: {productName2} <br />
+                    price: {productPrice2} <br />
                     status: {productStatus2}
                 </h2>
-                <br/><br/>
+                <br /><br />
                 {showPerson(display, users)}
             </div>
         );
